@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tony Technologies — Autonomous Agriculture Drone</title>
+<meta name="description" content="Tony Technologies builds Harvest One, an autonomous agricultural drone for crop health monitoring, irrigation intelligence, and yield forecasting.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ 
+<div class="grain"></div>
+<div class="progress" id="progress"></div>
+ 
+<!-- ================= NAV ================= -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="#home" class="logo" aria-label="Tony Technologies home">
+      <svg class="logo-mark" viewBox="0 0 40 40" fill="none">
+        <path d="M20 3 L35 31 L20 24.5 L5 31 Z" stroke="#C9A14A" stroke-width="2" stroke-linejoin="round"/>
+        <circle cx="20" cy="16.5" r="2.6" fill="#46E08B"/>
+      </svg>
+      <span class="name">TONY<small>Technologies</small></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#solutions">Use Cases</a></li>
+      <li><a href="#technology">Technology</a></li>
+      <li><a href="#product">Harvest One</a></li>
+      <li><a href="#crops">Crops</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#contact" class="btn btn-gold btn-nav magnetic"><span class="shine"></span>Request Demo</a>
+      <button class="burger" id="burger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#solutions">Use Cases</a><a href="#technology">Technology</a><a href="#product">Harvest One</a>
+  <a href="#crops">Crops</a><a href="#contact">Contact</a>
+  <a href="#contact" class="btn btn-gold"><span class="shine"></span>Request Demo</a>
+</div>
+ 
+<!-- ================= HERO ================= -->
+<header class="hero" id="home">
+  <div class="hero-bg">
+    <div class="aurora a1"></div><div class="aurora a2"></div><div class="aurora a3"></div>
+    <div class="hero-grid-bg"></div>
+    <canvas id="particles"></canvas>
+    <svg class="fields" viewBox="0 0 1440 220" preserveAspectRatio="none" style="height:220px;width:100%">
+      <path d="M0 220 L0 140 Q260 100 520 132 Q800 168 1060 122 Q1260 88 1440 116 L1440 220 Z" fill="#060A10"/>
+      <g stroke="rgba(70,224,139,.13)" stroke-width="1.3">
+        <path d="M30 220 Q56 178 76 148"/><path d="M120 220 Q146 180 162 154"/><path d="M210 220 Q234 184 248 160"/>
+        <path d="M310 220 Q332 188 344 166"/><path d="M420 220 Q440 192 450 174"/><path d="M530 220 Q548 196 556 180"/>
+        <path d="M650 220 Q666 199 674 185"/><path d="M770 220 Q786 200 794 187"/><path d="M880 220 Q898 196 908 180"/>
+        <path d="M990 220 Q1010 190 1022 170"/><path d="M1100 220 Q1122 184 1136 160"/><path d="M1210 220 Q1234 177 1250 150"/>
+        <path d="M1320 220 Q1346 172 1364 142"/>
+      </g>
+      <g fill="#0A0F16" stroke="rgba(201,161,74,.35)" stroke-width="1">
+        <path d="M1196 124 L1196 102 L1212 92 L1228 102 L1228 124 Z"/>
+        <rect x="1238" y="90" width="13" height="34" rx="2"/>
+      </g>
+    </svg>
+  </div>
+ 
+  <div class="hero-inner">
+    <div>
+      <div class="hero-kicker reveal" id="decodeTag">AGRICULTURAL AUTONOMY // EST. 2026</div>
+      <h1 class="stagger" id="heroH1">
+        <span class="w"><i>See&nbsp;every&nbsp;acre.</i></span><br>
+        <span class="w"><i class="accent">Act&nbsp;before</i></span><br>
+        <span class="w"><i class="accent">it&nbsp;costs&nbsp;you.</i></span>
+      </h1>
+      <p class="reveal d3">Tony Technologies builds <strong style="font-weight:500;color:var(--white)">Harvest One</strong> — an autonomous drone that turns every flight over your fields into crop health maps, irrigation intelligence, and yield forecasts.</p>
+      <div class="reveal d4" style="display:flex;gap:16px;flex-wrap:wrap">
+        <a href="#contact" class="btn btn-gold magnetic"><span class="shine"></span>Request Demo
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="#technology" class="btn btn-ghost magnetic"><span class="shine"></span>Explore Technology</a>
+      </div>
+      <div class="hero-stats reveal d5">
+        <div class="hstat"><div class="v">400 <em>ha/day</em></div><div class="k">Coverage</div></div>
+        <div class="hstat"><div class="v">1.2 <em>cm/px</em></div><div class="k">Resolution</div></div>
+        <div class="hstat"><div class="v">5+1 <em>bands</em></div><div class="k">Multispectral + Thermal</div></div>
+      </div>
+    </div>
+ 
+    <div class="hero-visual reveal d2" id="heroVisual">
+      <div class="hud-frame"><i></i><i></i><i></i><i></i></div>
+      <div class="hud-label tl">TT-H1 // LIVE FEED</div>
+      <div class="hud-label br" id="decodeHud">SURVEY GRID ACTIVE</div>
+      <div class="orbit o1"><span class="sat"></span></div>
+      <div class="orbit o2"><span class="sat"></span></div>
+      <div class="scan-beam"></div>
+      <div class="drone-stage">
+        <div class="drone-float" id="droneParallax">
+          <!-- Harvest One — detailed render -->
+          <svg width="400" height="290" viewBox="0 0 400 290" fill="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="hull" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#3A4458"/><stop offset=".45" stop-color="#1E2532"/><stop offset="1" stop-color="#10151E"/>
+              </linearGradient>
+              <linearGradient id="hullTop" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#4A5468"/><stop offset=".5" stop-color="#2A3242"/><stop offset="1" stop-color="#4A5468"/>
+              </linearGradient>
+              <linearGradient id="goldEdge" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#F0D58C"/><stop offset="1" stop-color="#8E6F2C"/>
+              </linearGradient>
+              <linearGradient id="armG" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#465064"/><stop offset="1" stop-color="#222A38"/>
+              </linearGradient>
+              <radialGradient id="lens" cx="35%" cy="35%" r="80%">
+                <stop offset="0" stop-color="#9BD7FF"/><stop offset=".4" stop-color="#1B3A5E"/><stop offset="1" stop-color="#0A1018"/>
+              </radialGradient>
+              <radialGradient id="discG" cx="50%" cy="50%" r="50%">
+                <stop offset=".55" stop-color="rgba(201,161,74,0)"/><stop offset=".8" stop-color="rgba(201,161,74,.12)"/><stop offset="1" stop-color="rgba(201,161,74,.28)"/>
+              </radialGradient>
+            </defs>
+            <!-- rotor discs (motion-blur look) -->
+            <g class="rotor-disc" style="transform-box:fill-box"><circle cx="76" cy="78" r="54" fill="url(#discG)"/><path d="M76 78 m-52 0 a52 52 0 0 1 104 0" stroke="rgba(240,213,140,.5)" stroke-width="1.4" fill="none"/></g>
+            <g class="rotor-disc" style="transform-box:fill-box;animation-delay:.04s"><circle cx="324" cy="78" r="54" fill="url(#discG)"/><path d="M324 78 m-52 0 a52 52 0 0 1 104 0" stroke="rgba(240,213,140,.5)" stroke-width="1.4" fill="none"/></g>
+            <g class="rotor-disc" style="transform-box:fill-box;animation-delay:.08s"><circle cx="76" cy="208" r="54" fill="url(#discG)"/><path d="M76 208 m-52 0 a52 52 0 0 1 104 0" stroke="rgba(240,213,140,.5)" stroke-width="1.4" fill="none"/></g>
+            <g class="rotor-disc" style="transform-box:fill-box;animation-delay:.02s"><circle cx="324" cy="208" r="54" fill="url(#discG)"/><path d="M324 208 m-52 0 a52 52 0 0 1 104 0" stroke="rgba(240,213,140,.5)" stroke-width="1.4" fill="none"/></g>
+            <!-- arms -->
+            <path d="M158 126 L84 84" stroke="url(#armG)" stroke-width="13" stroke-linecap="round"/>
+            <path d="M242 126 L316 84" stroke="url(#armG)" stroke-width="13" stroke-linecap="round"/>
+            <path d="M158 152 L84 202" stroke="url(#armG)" stroke-width="13" stroke-linecap="round"/>
+            <path d="M242 152 L316 202" stroke="url(#armG)" stroke-width="13" stroke-linecap="round"/>
+            <path d="M158 126 L84 84 M242 126 L316 84 M158 152 L84 202 M242 152 L316 202" stroke="url(#goldEdge)" stroke-width="1.6" stroke-linecap="round" opacity=".8"/>
+            <!-- motor pods -->
+            <g>
+              <rect x="60" y="62" width="32" height="30" rx="9" fill="#1A212D" stroke="#4A5468" stroke-width="1.6"/>
+              <rect x="308" y="62" width="32" height="30" rx="9" fill="#1A212D" stroke="#4A5468" stroke-width="1.6"/>
+              <rect x="60" y="194" width="32" height="30" rx="9" fill="#1A212D" stroke="#4A5468" stroke-width="1.6"/>
+              <rect x="308" y="194" width="32" height="30" rx="9" fill="#1A212D" stroke="#4A5468" stroke-width="1.6"/>
+              <circle cx="76" cy="77" r="5" fill="#0B0F15" stroke="#C9A14A" stroke-width="1.2"/>
+              <circle cx="324" cy="77" r="5" fill="#0B0F15" stroke="#C9A14A" stroke-width="1.2"/>
+              <circle cx="76" cy="209" r="5" fill="#0B0F15" stroke="#C9A14A" stroke-width="1.2"/>
+              <circle cx="324" cy="209" r="5" fill="#0B0F15" stroke="#C9A14A" stroke-width="1.2"/>
+            </g>
+            <!-- main hull -->
+            <path d="M148 122 Q200 96 252 122 L268 142 Q200 178 132 142 Z" fill="url(#hull)" stroke="#525E76" stroke-width="1.6"/>
+            <path d="M160 124 Q200 106 240 124 L246 132 Q200 150 154 132 Z" fill="url(#hullTop)" opacity=".85"/>
+            <path d="M163 126 Q200 111 237 126" stroke="url(#goldEdge)" stroke-width="2.2" fill="none"/>
+            <!-- vents -->
+            <path d="M176 134 l8 3 M192 137 l8 2 M208 137 l8 -2 M224 134 l8 -3" stroke="#5B6880" stroke-width="1.6" stroke-linecap="round"/>
+            <!-- GPS dome -->
+            <ellipse cx="200" cy="104" rx="13" ry="6" fill="#1E2532" stroke="#525E76" stroke-width="1.3"/>
+            <circle cx="200" cy="101" r="2" fill="#46E08B"><animate attributeName="opacity" values="1;.2;1" dur="1.8s" repeatCount="indefinite"/></circle>
+            <!-- gimbal + multispectral payload -->
+            <path d="M192 168 L208 168 L206 178 L194 178 Z" fill="#1A212D" stroke="#4A5468" stroke-width="1.3"/>
+            <rect x="178" y="176" width="44" height="30" rx="8" fill="#141A24" stroke="#525E76" stroke-width="1.6"/>
+            <circle cx="191" cy="191" r="8" fill="url(#lens)" stroke="#46E08B" stroke-width="1.4"/>
+            <circle cx="211" cy="191" r="8" fill="url(#lens)" stroke="#4D8DFF" stroke-width="1.4"/>
+            <circle cx="188" cy="188" r="2.2" fill="rgba(255,255,255,.85)"/>
+            <circle cx="208" cy="188" r="2.2" fill="rgba(255,255,255,.85)"/>
+            <!-- landing gear -->
+            <path d="M158 152 L148 228 M242 152 L252 228" stroke="#39435A" stroke-width="6" stroke-linecap="round"/>
+            <path d="M134 228 L172 228 M228 228 L266 228" stroke="#39435A" stroke-width="6" stroke-linecap="round"/>
+            <!-- nav strobes -->
+            <circle cx="140" cy="140" r="3.4" fill="#FF5A5A"><animate attributeName="opacity" values="1;.15;1" dur="1.2s" repeatCount="indefinite"/></circle>
+            <circle cx="260" cy="140" r="3.4" fill="#46E08B"><animate attributeName="opacity" values=".15;1;.15" dur="1.2s" repeatCount="indefinite"/></circle>
+          </svg>
+        </div>
+      </div>
+      <div class="tele-chip c1"><b>NDVI 0.74</b>Field 12 · Healthy</div>
+      <div class="tele-chip c2"><b>342 ha</b>Mapped today</div>
+      <div class="tele-chip c3"><b>ALT 60 m</b>RTK Fix · 14 sat</div>
+    </div>
+  </div>
+  <div class="scroll-hint"><span>Scroll</span><span class="line"></span></div>
+</header>
+ 
+<!-- ================= TICKER ================= -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track" id="tickerTrack">
+    <span>Crop Health Monitoring</span><span>NDVI · NDRE · Thermal</span><span>Irrigation Intelligence</span>
+    <span>Variable-Rate Prescriptions</span><span>Stand Counts</span><span>Yield Forecasting</span>
+    <span>FAA Part 107</span><span>RTK ±2 cm</span>
+  </div>
+</div>
+ 
+<!-- ================= USE CASES ================= -->
+<section id="solutions">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="eyebrow"><span class="tick"></span><span class="mono-tag">Use Cases</span></div>
+      <h2 class="sec-title">One drone.<br><span class="dim">Every week of the season.</span></h2>
+      <p class="sec-sub">From emergence to harvest, Harvest One earns its place on the farm year-round.</p>
+    </div>
+    <div class="sol-grid">
+      <div class="sol-card tilt reveal"><div class="glare"></div>
+        <div class="sol-num">UC—01</div>
+        <div class="sol-icon"><svg viewBox="0 0 24 24"><path d="M3 21c4-1 5-4 5-7 4 1 8-1 9-5 1-3 0-6 0-6s-3-1-6 0C7 4 5 8 6 12c-3 0-5 2-3 9z"/></svg></div>
+        <h3>Crop Health Monitoring</h3>
+        <p>Weekly NDVI and NDRE maps reveal stress, disease, and pest pressure days before it's visible from the ground.</p>
+      </div>
+      <div class="sol-card tilt reveal d1"><div class="glare"></div>
+        <div class="sol-num">UC—02</div>
+        <div class="sol-icon"><svg viewBox="0 0 24 24"><path d="M12 22c5-3 8-7 8-12a8 8 0 10-16 0c0 5 3 9 8 12z"/><path d="M12 8v6M9 11h6"/></svg></div>
+        <h3>Irrigation Management</h3>
+        <p>Thermal imaging pinpoints clogged emitters, leaks, and dry zones across pivots and drip systems.</p>
+      </div>
+      <div class="sol-card tilt reveal d2"><div class="glare"></div>
+        <div class="sol-num">UC—03</div>
+        <div class="sol-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div>
+        <h3>Variable-Rate Prescriptions</h3>
+        <p>Export zone maps straight to your spreader, sprayer, or seeder — treat only where it pays.</p>
+      </div>
+      <div class="sol-card tilt reveal d3"><div class="glare"></div>
+        <div class="sol-num">UC—04</div>
+        <div class="sol-icon"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></div>
+        <h3>Stand Counts &amp; Yield</h3>
+        <p>Early emergence counts and biomass tracking sharpen replant decisions and yield estimates.</p>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- ================= TECHNOLOGY ================= -->
+<section class="tech" id="technology">
+  <div class="container">
+    <div class="tech-split">
+      <div class="panel reveal" aria-label="Live NDVI crop health map demonstration">
+        <div class="panel-top"><span class="t">FIELD 12 — NDVI INDEX</span><span class="live">LIVE SCAN</span></div>
+        <div class="ndvi-grid" id="ndviGrid"></div>
+        <div class="ndvi-legend"><span>Stressed</span><div class="legend-bar"></div><span>Healthy</span></div>
+        <div class="panel-readout"><span>SENSOR <b>5-BAND MS</b></span><span>GSD <b>1.2 CM/PX</b></span><span>ANOMALY AI <b>ON</b></span></div>
+        <div class="cross-sweep"></div>
+      </div>
+      <div>
+        <div class="eyebrow reveal"><span class="tick"></span><span class="mono-tag">Technology</span></div>
+        <h2 class="sec-title reveal d1">From flight<br><span class="dim">to field decision.</span></h2>
+        <div class="feature reveal d1">
+          <div class="f-num">/01</div>
+          <div><h3>Autonomous Field Coverage</h3><p>Draw your boundary once — Harvest One plans the survey grid, flies it, and returns home on its own.</p></div>
+        </div>
+        <div class="feature reveal d2">
+          <div class="f-num">/02</div>
+          <div><h3>Multispectral AI Vision</h3><p>Five spectral bands plus thermal, analyzed onboard to flag stress, weeds, and water issues automatically.</p></div>
+        </div>
+        <div class="feature reveal d3">
+          <div class="f-num">/03</div>
+          <div><h3>Farm Management Integration</h3><p>Prescription maps export to John Deere Ops Center, Climate FieldView, and standard shapefiles.</p></div>
+        </div>
+        <div class="feature reveal d4">
+          <div class="f-num">/04</div>
+          <div><h3>Cloud Agronomy Analytics</h3><p>Season-over-season trends, zone comparisons, and scouting reports minutes after landing.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- ================= PRODUCT ================= -->
+<section id="product">
+  <div class="container">
+    <div class="sec-head center reveal">
+      <div class="eyebrow"><span class="mono-tag">The Aircraft</span></div>
+      <h2 class="sec-title">Meet Harvest One</h2>
+      <p class="sec-sub">One platform, engineered exclusively for agriculture. No compromises borrowed from other industries.</p>
+    </div>
+    <div class="prod-wrap reveal">
+      <div class="prod-stage">
+        <div class="pad"></div>
+        <div class="drone-float" style="animation-duration:8.5s">
+          <svg width="360" height="262" viewBox="0 0 400 290" fill="none" aria-hidden="true">
+            <use href="#droneCore"/>
+          </svg>
+        </div>
+      </div>
+      <div class="prod-info">
+        <h3 class="prod-name">Harvest One</h3>
+        <div class="prod-sub">Autonomous Agricultural Monitoring UAS</div>
+        <p>Built around a 5-band multispectral + thermal payload and an autonomy core that flies survey grids without a pilot on the sticks. Launch from the truck bed, walk the rows, come back to finished maps.</p>
+        <div class="spec-grid">
+          <div class="spec-cell"><div class="k">Coverage</div><div class="v">400 <small>HA/DAY</small></div></div>
+          <div class="spec-cell"><div class="k">Flight time</div><div class="v">48 <small>MIN</small></div></div>
+          <div class="spec-cell"><div class="k">Resolution</div><div class="v">1.2 <small>CM/PX</small></div></div>
+          <div class="spec-cell"><div class="k">Sensors</div><div class="v">5+1 <small>BANDS</small></div></div>
+          <div class="spec-cell"><div class="k">Wind rating</div><div class="v">12 <small>M/S</small></div></div>
+          <div class="spec-cell"><div class="k">Positioning</div><div class="v">RTK <small>±2 CM</small></div></div>
+        </div>
+        <a href="#contact" class="btn btn-gold magnetic"><span class="shine"></span>Request Demo
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- hidden reusable drone symbol -->
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <g id="droneCore">
+      <g class="rotor-disc" style="transform-box:fill-box"><circle cx="76" cy="78" r="54" fill="rgba(201,161,74,.07)" stroke="rgba(240,213,140,.4)" stroke-width="1"/></g>
+      <g class="rotor-disc" style="transform-box:fill-box;animation-delay:.05s"><circle cx="324" cy="78" r="54" fill="rgba(201,161,74,.07)" stroke="rgba(240,213,140,.4)" stroke-width="1"/></g>
+      <g class="rotor-disc" style="transform-box:fill-box;animation-delay:.09s"><circle cx="76" cy="208" r="54" fill="rgba(201,161,74,.07)" stroke="rgba(240,213,140,.4)" stroke-width="1"/></g>
+      <g class="rotor-disc" style="transform-box:fill-box;animation-delay:.03s"><circle cx="324" cy="208" r="54" fill="rgba(201,161,74,.07)" stroke="rgba(240,213,140,.4)" stroke-width="1"/></g>
+      <path d="M158 126 L84 84 M242 126 L316 84 M158 152 L84 202 M242 152 L316 202" stroke="#39435A" stroke-width="13" stroke-linecap="round"/>
+      <path d="M158 126 L84 84 M242 126 L316 84 M158 152 L84 202 M242 152 L316 202" stroke="#C9A14A" stroke-width="1.6" stroke-linecap="round" opacity=".7"/>
+      <rect x="60" y="62" width="32" height="30" rx="9" fill="#1A212D" stroke="#4A5468" stroke-width="1.6"/>
+      <rect x="308" y="62" width="32" height="30" rx="9" fill="#1A212D" stroke="#4A5468" stroke-width="1.6"/>
+      <rect x="60" y="194" width="32" height="30" rx="9" fill="#1A212D" stroke="#4A5468" stroke-width="1.6"/>
+      <rect x="308" y="194" width="32" height="30" rx="9" fill="#1A212D" stroke="#4A5468" stroke-width="1.6"/>
+      <path d="M148 122 Q200 96 252 122 L268 142 Q200 178 132 142 Z" fill="#1E2532" stroke="#525E76" stroke-width="1.6"/>
+      <path d="M163 126 Q200 111 237 126" stroke="#C9A14A" stroke-width="2.2" fill="none"/>
+      <rect x="178" y="176" width="44" height="30" rx="8" fill="#141A24" stroke="#525E76" stroke-width="1.6"/>
+      <circle cx="191" cy="191" r="8" fill="#11233A" stroke="#46E08B" stroke-width="1.4"/>
+      <circle cx="211" cy="191" r="8" fill="#11233A" stroke="#4D8DFF" stroke-width="1.4"/>
+      <path d="M158 152 L148 228 M242 152 L252 228" stroke="#39435A" stroke-width="6" stroke-linecap="round"/>
+      <path d="M134 228 L172 228 M228 228 L266 228" stroke="#39435A" stroke-width="6" stroke-linecap="round"/>
+      <circle cx="140" cy="140" r="3.4" fill="#FF5A5A"><animate attributeName="opacity" values="1;.15;1" dur="1.2s" repeatCount="indefinite"/></circle>
+      <circle cx="260" cy="140" r="3.4" fill="#46E08B"><animate attributeName="opacity" values=".15;1;.15" dur="1.2s" repeatCount="indefinite"/></circle>
+    </g>
+  </defs>
+</svg>
+ 
+<!-- ================= ARCHITECTURE ================= -->
+<section id="architecture" style="padding-top:0">
+  <div class="container">
+    <div class="sec-head center reveal">
+      <div class="eyebrow"><span class="mono-tag">System Architecture</span></div>
+      <h2 class="sec-title">Rotor to report</h2>
+      <p class="sec-sub">Every Harvest One runs one integrated stack, hardened end to end.</p>
+    </div>
+    <div class="arch-diagram">
+      <div class="arch-node reveal">
+        <div class="n-icon"><svg viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg></div>
+        <div><h4>Flight Controller</h4><span>Redundant autopilot core</span></div><span class="n-id">M-01</span>
+      </div>
+      <div class="arch-link"></div>
+      <div class="arch-node reveal d1">
+        <div class="n-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+        <div><h4>Navigation System</h4><span>RTK GNSS — ±2 cm over every row</span></div><span class="n-id">M-02</span>
+      </div>
+      <div class="arch-link l2"></div>
+      <div class="arch-node reveal d2">
+        <div class="n-icon"><svg viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <div><h4>Sensors</h4><span>5-band multispectral, RGB, thermal</span></div><span class="n-id">M-03</span>
+      </div>
+      <div class="arch-link l3"></div>
+      <div class="arch-node reveal d3">
+        <div class="n-icon"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 9h6v6H9z"/></svg></div>
+        <div><h4>AI Compute</h4><span>Onboard NDVI + anomaly detection</span></div><span class="n-id">M-04</span>
+      </div>
+      <div class="arch-link l4"></div>
+      <div class="arch-node reveal d4">
+        <div class="n-icon"><svg viewBox="0 0 24 24"><path d="M5 12a7 7 0 0114 0M2 12a10 10 0 0120 0"/><circle cx="12" cy="16" r="2"/><path d="M12 18v3"/></svg></div>
+        <div><h4>Communication System</h4><span>Long-range link + LTE for remote fields</span></div><span class="n-id">M-05</span>
+      </div>
+      <div class="arch-link l5"></div>
+      <div class="arch-node reveal d5">
+        <div class="n-icon"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="12" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+        <div><h4>Ground Station</h4><span>Field maps, prescriptions, season analytics</span></div><span class="n-id">M-06</span>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- ================= CROPS ================= -->
+<section id="crops" style="padding-top:0">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="eyebrow"><span class="tick"></span><span class="mono-tag">Crops</span></div>
+      <h2 class="sec-title">Tuned to <span class="dim">what you grow.</span></h2>
+      <p class="sec-sub">Analytics models calibrated per crop — not one-size-fits-all vegetation indices.</p>
+    </div>
+    <div class="ind-grid">
+      <div class="ind-card tilt reveal"><div class="glare"></div><h3><svg viewBox="0 0 24 24"><path d="M12 22V8M12 8c-3 0-5-2-5-5 3 0 5 2 5 5zM12 12c3 0 5-2 5-5-3 0-5 2-5 5zM12 17c-3 0-5-2-5-5 3 0 5 2 5 5z"/></svg>Corn &amp; Soybeans</h3><p>Stand counts, nitrogen stress zones, and tassel-stage health tracking at row-crop scale.</p></div>
+      <div class="ind-card tilt reveal d1"><div class="glare"></div><h3><svg viewBox="0 0 24 24"><circle cx="9" cy="14" r="3"/><circle cx="15" cy="14" r="3"/><circle cx="12" cy="9" r="3"/><path d="M12 6V2"/></svg>Vineyards</h3><p>Vigor maps by block and row for canopy management and selective harvest planning.</p></div>
+      <div class="ind-card tilt reveal d2"><div class="glare"></div><h3><svg viewBox="0 0 24 24"><circle cx="12" cy="14" r="6"/><path d="M12 8V4M12 4c2.5 0 4 1.5 4 1.5"/></svg>Orchards</h3><p>Tree-level health scoring, missing-tree detection, and irrigation uniformity checks.</p></div>
+      <div class="ind-card tilt reveal"><div class="glare"></div><h3><svg viewBox="0 0 24 24"><path d="M4 21c2-6 4-9 8-9M12 12c0-4 2-7 8-9-1 6-3 9-8 9z"/><path d="M4 21h16"/></svg>Wheat &amp; Grains</h3><p>Biomass and lodging assessment to time inputs and harvest order across fields.</p></div>
+      <div class="ind-card tilt reveal d1"><div class="glare"></div><h3><svg viewBox="0 0 24 24"><circle cx="8" cy="8" r="2.5"/><circle cx="16" cy="8" r="2.5"/><circle cx="8" cy="16" r="2.5"/><circle cx="16" cy="16" r="2.5"/></svg>Cotton &amp; Specialty</h3><p>Plant population, defoliation timing, and boll-stage monitoring for specialty rotations.</p></div>
+      <div class="ind-card tilt reveal d2"><div class="glare"></div><h3><svg viewBox="0 0 24 24"><path d="M3 18c3-1 5-1 9 0s6 1 9 0"/><path d="M3 14c3-1 5-1 9 0s6 1 9 0"/><path d="M7 10c1-3 3-5 5-6 2 1 4 3 5 6"/></svg>Pasture &amp; Forage</h3><p>Grazing rotation planning and forage availability mapping across large acreage.</p></div>
+    </div>
+  </div>
+</section>
+ 
+<!-- ================= METRICS ================= -->
+<div class="metrics">
+  <div class="container">
+    <div class="metric-grid">
+      <div class="metric reveal"><div class="num"><span class="counter" data-target="250">0</span>K+</div><div class="label">Hectares Mapped</div></div>
+      <div class="metric reveal d1"><div class="num"><span class="counter" data-target="12">0</span>K+</div><div class="label">Survey Flights</div></div>
+      <div class="metric reveal d2"><div class="num"><span class="counter" data-target="8">0</span>%</div><div class="label">Avg. Input Savings</div></div>
+      <div class="metric reveal d3"><div class="num"><span class="counter" data-target="98">0</span>%</div><div class="label">Mission Success Rate</div></div>
+    </div>
+  </div>
+</div>
+ 
+<!-- ================= WHY ================= -->
+<section id="about">
+  <div class="container">
+    <div class="sec-head center reveal">
+      <div class="eyebrow"><span class="mono-tag">Why Tony Technologies</span></div>
+      <h2 class="sec-title">Built for the farm, by design</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-tag">Foundation</div>
+        <h3>Aerospace Engineering</h3>
+        <p>Built by aerospace engineers to flight-critical standards — a drone that survives dust, heat, and a full season of daily use.</p>
+      </div>
+      <div class="why-card reveal d1">
+        <div class="why-tag">Intelligence</div>
+        <h3>Agronomic Intelligence</h3>
+        <p>AI models trained with crop scientists, so the maps you get answer agronomy questions — not just pretty pictures.</p>
+      </div>
+      <div class="why-card reveal d2">
+        <div class="why-tag">Reliability</div>
+        <h3>Season-Critical Reliability</h3>
+        <p>When a spray window is 48 hours, your data can't wait. Redundant systems and a 98% mission success record.</p>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- ================= TESTIMONIALS ================= -->
+<section id="testimonials" style="padding-top:0">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="eyebrow"><span class="tick"></span><span class="mono-tag">Field Reports</span></div>
+      <h2 class="sec-title">Growers <span class="dim">on the record.</span></h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card reveal">
+        <div class="q">"</div>
+        <p>Harvest One flagged a nitrogen deficiency in our north quarter ten days before we'd have caught it scouting. That one catch paid for the season.</p>
+        <div class="testi-who"><div class="avatar">JA</div><div><b>James Alvarez</b><span>Heartland Farms Group</span></div></div>
+      </div>
+      <div class="testi-card reveal d1">
+        <div class="q">"</div>
+        <p>We found three failed drip zones in one thermal flight over the almonds. Used to take a crew two days of walking rows to find one.</p>
+        <div class="testi-who"><div class="avatar">EP</div><div><b>Elena Park</b><span>Vista Verde Almonds</span></div></div>
+      </div>
+      <div class="testi-card reveal d2">
+        <div class="q">"</div>
+        <p>The variable-rate maps go straight into our Deere monitor. We cut fertilizer 12% last year with no yield drag. The math isn't complicated.</p>
+        <div class="testi-who"><div class="avatar">TW</div><div><b>Tom Whitfield</b><span>Whitfield Grain Co.</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- ================= CTA ================= -->
+<section class="cta-final" id="contact" style="padding-top:0">
+  <div class="container">
+    <div class="cta-box reveal">
+      <span class="mono-tag">// Get Started</span>
+      <h2>Ready to see your fields differently?</h2>
+      <p>Talk to our team about your crops, acreage, and season — we'll fly a demo over your own fields.</p>
+      <div class="cta-buttons">
+        <a href="#" class="btn btn-gold magnetic"><span class="shine"></span>Request Demo
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="#" class="btn btn-ghost magnetic"><span class="shine"></span>Schedule Consultation</a>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="logo">
+          <svg class="logo-mark" viewBox="0 0 40 40" fill="none">
+            <path d="M20 3 L35 31 L20 24.5 L5 31 Z" stroke="#C9A14A" stroke-width="2" stroke-linejoin="round"/>
+            <circle cx="20" cy="16.5" r="2.6" fill="#46E08B"/>
+          </svg>
+          <span class="name">TONY<small>Technologies</small></span>
+        </a>
+        <p>Autonomous agricultural drones for crop monitoring, irrigation intelligence, and yield forecasting.</p>
+        <div class="socials" aria-label="Social media">
+          <a href="#" aria-label="X / Twitter"><svg viewBox="0 0 24 24"><path d="M4 4l16 16M20 4L4 20"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 11v6M8 8v.01M12 17v-4a2 2 0 014 0v4"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17 7v.01"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Use Cases</h4>
+        <ul><li><a href="#solutions">Crop Health</a></li><li><a href="#solutions">Irrigation</a></li><li><a href="#solutions">Prescriptions</a></li><li><a href="#solutions">Yield Forecasting</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <ul><li><a href="#product">Harvest One</a></li><li><a href="#technology">Technology</a></li><li><a href="#architecture">Architecture</a></li><li><a href="#crops">Crops</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul><li><a href="#about">About</a></li><li><a href="#">Careers</a></li><li><a href="#contact">Contact</a></li></ul>
+        <h4 style="margin-top:30px">Newsletter</h4>
+        <div class="newsletter">
+          <input type="email" placeholder="WORK EMAIL" aria-label="Email for newsletter">
+          <button type="button">Join</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Tony Technologies, Inc.</span>
+      <div class="legal"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Export Compliance</a></div>
+    </div>
+  </div>
+</footer>
+ 
+<script src="script.js"></script>
+</body>
+</html>

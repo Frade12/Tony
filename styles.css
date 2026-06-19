@@ -79,7 +79,6 @@ nav.scrolled{background:rgba(7,11,17,.78);backdrop-filter:blur(20px);border-colo
 .nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:width .35s}
 .nav-links a:hover{color:var(--white)}
 .nav-links a:hover::after{width:100%}
-.btn-nav{padding:13px 24px;font-size:.68rem}
 .burger{display:none;background:none;border:none;cursor:pointer;width:42px;height:42px;z-index:102}
 .burger span{display:block;width:24px;height:2px;background:var(--white);margin:5px auto}
 .mobile-menu{position:fixed;inset:0;background:rgba(7,11,17,.97);backdrop-filter:blur(22px);z-index:101;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:30px;opacity:0;pointer-events:none;transition:opacity .35s}
@@ -231,11 +230,6 @@ footer{border-top:1px solid var(--border);background:#05080D;padding:84px 0 40px
 .footer-col li{margin-bottom:13px}
 .footer-col a{font-size:.88rem;color:var(--muted);transition:color .3s,padding-left .3s}
 .footer-col a:hover{color:var(--gold);padding-left:5px}
-.newsletter{display:flex;margin-top:10px;border:1px solid var(--border);border-radius:8px;overflow:hidden;max-width:300px}
-.newsletter input{flex:1;min-width:0;background:rgba(255,255,255,.03);border:none;padding:13px 14px;color:var(--white);font-family:var(--font-m);font-size:.74rem;outline:none}
-.newsletter input::placeholder{color:var(--muted2)}
-.newsletter button{background:var(--gold);border:none;color:#0A0E14;font-family:var(--font-d);font-weight:600;font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;padding:0 20px;cursor:pointer;transition:background .3s}
-.newsletter button:hover{background:var(--gold-hi)}
 .footer-bottom{border-top:1px solid var(--border);padding-top:32px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;font-family:var(--font-m);font-size:.66rem;letter-spacing:.12em;color:var(--muted2);text-transform:uppercase}
 .footer-bottom .legal{display:flex;gap:26px}
 .footer-bottom .legal a:hover{color:var(--gold)}
@@ -251,7 +245,7 @@ footer{border-top:1px solid var(--border);background:#05080D;padding:84px 0 40px
 }
 @media(max-width:680px){
   section{padding:90px 0}
-  .nav-links,.nav-cta .btn{display:none}
+  .nav-links{display:none}
   .burger{display:block}
   .sol-grid,.why-grid,.soon-grid{grid-template-columns:1fr}
   .hero{padding-top:140px}

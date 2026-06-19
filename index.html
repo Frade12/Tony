@@ -3,18 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tony Technologies — Autonomous Agriculture Drone</title>
-<meta name="description" content="Tony Technologies builds Harvest One, an autonomous agricultural drone for crop health monitoring, irrigation intelligence, and yield forecasting.">
+<title>Tony Technologies — DRONE-ROBOT (DROT)</title>
+<meta name="description" content="Tony Technologies builds DRONE-ROBOT (DROT), an autonomous harvesting drone that recovers the fruit labor shortages and short harvest windows leave on the tree.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
- 
+
 <div class="grain"></div>
 <div class="progress" id="progress"></div>
- 
+
 <!-- ================= NAV ================= -->
 <nav id="nav">
   <div class="nav-inner">
@@ -26,10 +26,10 @@
       <span class="name">TONY<small>Technologies</small></span>
     </a>
     <ul class="nav-links">
+      <li><a href="#problem">The Problem</a></li>
       <li><a href="#solutions">Use Cases</a></li>
-      <li><a href="#technology">Technology</a></li>
-      <li><a href="#product">Harvest One</a></li>
-      <li><a href="#crops">Crops</a></li>
+      <li><a href="#drone">The Drone</a></li>
+      <li><a href="#mission">Mission</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <div class="nav-cta">
@@ -39,11 +39,11 @@
   </div>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#solutions">Use Cases</a><a href="#technology">Technology</a><a href="#product">Harvest One</a>
-  <a href="#crops">Crops</a><a href="#contact">Contact</a>
+  <a href="#problem">The Problem</a><a href="#solutions">Use Cases</a><a href="#drone">The Drone</a>
+  <a href="#mission">Mission</a><a href="#contact">Contact</a>
   <a href="#contact" class="btn btn-gold"><span class="shine"></span>Request Demo</a>
 </div>
- 
+
 <!-- ================= HERO ================= -->
 <header class="hero" id="home">
   <div class="hero-bg">
@@ -65,39 +65,39 @@
       </g>
     </svg>
   </div>
- 
+
   <div class="hero-inner">
     <div>
-      <div class="hero-kicker reveal" id="decodeTag">AGRICULTURAL AUTONOMY // EST. 2026</div>
+      <div class="hero-kicker reveal" id="decodeTag">TONY TECHNOLOGIES PRESENTS // EST. 2026</div>
       <h1 class="stagger" id="heroH1">
-        <span class="w"><i>See&nbsp;every&nbsp;acre.</i></span><br>
-        <span class="w"><i class="accent">Act&nbsp;before</i></span><br>
-        <span class="w"><i class="accent">it&nbsp;costs&nbsp;you.</i></span>
+        <span class="w"><i>DRONE-ROBOT</i></span><br>
+        <span class="w"><i class="accent">(DROT)</i></span>
       </h1>
-      <p class="reveal d3">Tony Technologies builds <strong style="font-weight:500;color:var(--white)">Harvest One</strong> — an autonomous drone that turns every flight over your fields into crop health maps, irrigation intelligence, and yield forecasts.</p>
+      <p class="hero-tagline reveal d2">The drone that picks the fruit your crew <span class="ht-accent">can't reach in time.</span></p>
+      <p class="reveal d3">DROT is a revolutionary harvesting drone built for hard-fruit growers. Every harvest is a race against a narrow window: when an orchard ripens, the whole crop comes due within a few days — but there are rarely enough hands to bring it all in. Between labor shortages and harvest windows that close in just two or three days, growers routinely leave <strong style="font-weight:500;color:var(--white)">20&ndash;30% of their fruit</strong> unpicked on the tree, where it drops, rots, and turns into lost revenue. DROT closes that gap, recovering the fruit that would otherwise go to waste.</p>
       <div class="reveal d4" style="display:flex;gap:16px;flex-wrap:wrap">
         <a href="#contact" class="btn btn-gold magnetic"><span class="shine"></span>Request Demo
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
-        <a href="#technology" class="btn btn-ghost magnetic"><span class="shine"></span>Explore Technology</a>
+        <a href="#problem" class="btn btn-ghost magnetic"><span class="shine"></span>See the Problem</a>
       </div>
       <div class="hero-stats reveal d5">
-        <div class="hstat"><div class="v">400 <em>ha/day</em></div><div class="k">Coverage</div></div>
-        <div class="hstat"><div class="v">1.2 <em>cm/px</em></div><div class="k">Resolution</div></div>
-        <div class="hstat"><div class="v">5+1 <em>bands</em></div><div class="k">Multispectral + Thermal</div></div>
+        <div class="hstat"><div class="v">20&ndash;30% <em>lost</em></div><div class="k">Fruit left on the tree</div></div>
+        <div class="hstat"><div class="v">2&ndash;3 <em>days</em></div><div class="k">Harvest window</div></div>
+        <div class="hstat"><div class="v">On&#8209;demand <em>scale</em></div><div class="k">Crew augmentation</div></div>
       </div>
     </div>
- 
+
     <div class="hero-visual reveal d2" id="heroVisual">
       <div class="hud-frame"><i></i><i></i><i></i><i></i></div>
-      <div class="hud-label tl">TT-H1 // LIVE FEED</div>
-      <div class="hud-label br" id="decodeHud">SURVEY GRID ACTIVE</div>
+      <div class="hud-label tl">DROT // LIVE FEED</div>
+      <div class="hud-label br" id="decodeHud">HARVEST MODE ACTIVE</div>
       <div class="orbit o1"><span class="sat"></span></div>
       <div class="orbit o2"><span class="sat"></span></div>
       <div class="scan-beam"></div>
       <div class="drone-stage">
         <div class="drone-float" id="droneParallax">
-          <!-- Harvest One — detailed render -->
+          <!-- DROT — detailed render -->
           <svg width="400" height="290" viewBox="0 0 400 290" fill="none" aria-hidden="true">
             <defs>
               <linearGradient id="hull" x1="0" y1="0" x2="0" y2="1">
@@ -150,13 +150,15 @@
             <!-- GPS dome -->
             <ellipse cx="200" cy="104" rx="13" ry="6" fill="#1E2532" stroke="#525E76" stroke-width="1.3"/>
             <circle cx="200" cy="101" r="2" fill="#46E08B"><animate attributeName="opacity" values="1;.2;1" dur="1.8s" repeatCount="indefinite"/></circle>
-            <!-- gimbal + multispectral payload -->
-            <path d="M192 168 L208 168 L206 178 L194 178 Z" fill="#1A212D" stroke="#4A5468" stroke-width="1.3"/>
-            <rect x="178" y="176" width="44" height="30" rx="8" fill="#141A24" stroke="#525E76" stroke-width="1.6"/>
-            <circle cx="191" cy="191" r="8" fill="url(#lens)" stroke="#46E08B" stroke-width="1.4"/>
-            <circle cx="211" cy="191" r="8" fill="url(#lens)" stroke="#4D8DFF" stroke-width="1.4"/>
-            <circle cx="188" cy="188" r="2.2" fill="rgba(255,255,255,.85)"/>
-            <circle cx="208" cy="188" r="2.2" fill="rgba(255,255,255,.85)"/>
+            <!-- harvesting robotic arm (folded) + gripper -->
+            <path d="M200 168 L200 196" stroke="url(#armG)" stroke-width="7" stroke-linecap="round"/>
+            <path d="M200 196 L186 214" stroke="url(#armG)" stroke-width="6" stroke-linecap="round"/>
+            <circle cx="200" cy="196" r="4" fill="#1A212D" stroke="#C9A14A" stroke-width="1.3"/>
+            <path d="M186 214 l-7 7 M186 214 l7 7" stroke="#46E08B" stroke-width="2.4" stroke-linecap="round"/>
+            <!-- camera / sensor pod -->
+            <rect x="182" y="170" width="36" height="22" rx="7" fill="#141A24" stroke="#525E76" stroke-width="1.6"/>
+            <circle cx="200" cy="181" r="7" fill="url(#lens)" stroke="#46E08B" stroke-width="1.4"/>
+            <circle cx="197" cy="178" r="2" fill="rgba(255,255,255,.85)"/>
             <!-- landing gear -->
             <path d="M158 152 L148 228 M242 152 L252 228" stroke="#39435A" stroke-width="6" stroke-linecap="round"/>
             <path d="M134 228 L172 228 M228 228 L266 228" stroke="#39435A" stroke-width="6" stroke-linecap="round"/>
@@ -166,132 +168,148 @@
           </svg>
         </div>
       </div>
-      <div class="tele-chip c1"><b>NDVI 0.74</b>Field 12 · Healthy</div>
-      <div class="tele-chip c2"><b>342 ha</b>Mapped today</div>
-      <div class="tele-chip c3"><b>ALT 60 m</b>RTK Fix · 14 sat</div>
+      <div class="tele-chip c1"><b>BLOCK 7</b>Harvesting</div>
+      <div class="tele-chip c2"><b>ARM REACH</b>Extending to canopy</div>
+      <div class="tele-chip c3"><b>ALT 4 m</b>RTK Fix · 14 sat</div>
     </div>
   </div>
   <div class="scroll-hint"><span>Scroll</span><span class="line"></span></div>
 </header>
- 
+
 <!-- ================= TICKER ================= -->
 <div class="ticker" aria-hidden="true">
   <div class="ticker-track" id="tickerTrack">
-    <span>Crop Health Monitoring</span><span>NDVI · NDRE · Thermal</span><span>Irrigation Intelligence</span>
-    <span>Variable-Rate Prescriptions</span><span>Stand Counts</span><span>Yield Forecasting</span>
-    <span>FAA Part 107</span><span>RTK ±2 cm</span>
+    <span>Harvest Recovery</span><span>Peak-Window Picking</span><span>Hard-to-Reach Fruit</span>
+    <span>Crew Augmentation</span><span>Autonomous Operation</span><span>Extended Hours</span>
+    <span>Less Waste · More Revenue</span><span>Built for Hard-Fruit Growers</span>
   </div>
 </div>
- 
+
+<!-- ================= THE PROBLEM ================= -->
+<section id="problem">
+  <div class="container">
+    <div class="sec-head center reveal">
+      <div class="eyebrow"><span class="mono-tag">The Problem</span></div>
+      <h2 class="sec-title">The problem, <span class="dim">stated simply.</span></h2>
+      <p class="sec-sub">When the fruit is ready, the clock is already running — and most farms can't beat it.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-tag">01 — Labor</div>
+        <h3>Not enough hands</h3>
+        <p>Labor shortages mean there aren't enough pickers when the fruit is ready — and the cost of labor, when it can be found, is high.</p>
+      </div>
+      <div class="why-card reveal d1">
+        <div class="why-tag">02 — Time</div>
+        <h3>The window slams shut</h3>
+        <p>A large orchard ripens faster than a crew can harvest it — often the entire crop within two to three days.</p>
+      </div>
+      <div class="why-card reveal d2">
+        <div class="why-tag">03 — Waste</div>
+        <h3>Fruit left to rot</h3>
+        <p>The result: 20&ndash;30% of the fruit is left on the tree, unharvested and lost.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ================= USE CASES ================= -->
-<section id="solutions">
+<section id="solutions" style="padding-top:0">
   <div class="container">
     <div class="sec-head reveal">
       <div class="eyebrow"><span class="tick"></span><span class="mono-tag">Use Cases</span></div>
-      <h2 class="sec-title">One drone.<br><span class="dim">Every week of the season.</span></h2>
-      <p class="sec-sub">From emergence to harvest, Harvest One earns its place on the farm year-round.</p>
+      <h2 class="sec-title">One drone.<br><span class="dim">Every acre your crew can't get to.</span></h2>
+      <p class="sec-sub">DROT works where and when labor falls short — clearing fruit before it's lost.</p>
     </div>
     <div class="sol-grid">
       <div class="sol-card tilt reveal"><div class="glare"></div>
-        <div class="sol-num">UC—01</div>
-        <div class="sol-icon"><svg viewBox="0 0 24 24"><path d="M3 21c4-1 5-4 5-7 4 1 8-1 9-5 1-3 0-6 0-6s-3-1-6 0C7 4 5 8 6 12c-3 0-5 2-3 9z"/></svg></div>
-        <h3>Crop Health Monitoring</h3>
-        <p>Weekly NDVI and NDRE maps reveal stress, disease, and pest pressure days before it's visible from the ground.</p>
+        <div class="sol-num">UC&mdash;01</div>
+        <div class="sol-icon"><svg viewBox="0 0 24 24"><path d="M12 22c5-3 8-7 8-12a8 8 0 10-16 0c0 5 3 9 8 12z"/><path d="M9 11l2 2 4-4"/></svg></div>
+        <h3>Peak-Window Harvesting</h3>
+        <p>Deploy DROT to clear ripe blocks before the window closes, so no fruit is left behind.</p>
       </div>
       <div class="sol-card tilt reveal d1"><div class="glare"></div>
-        <div class="sol-num">UC—02</div>
-        <div class="sol-icon"><svg viewBox="0 0 24 24"><path d="M12 22c5-3 8-7 8-12a8 8 0 10-16 0c0 5 3 9 8 12z"/><path d="M12 8v6M9 11h6"/></svg></div>
-        <h3>Irrigation Management</h3>
-        <p>Thermal imaging pinpoints clogged emitters, leaks, and dry zones across pivots and drip systems.</p>
+        <div class="sol-num">UC&mdash;02</div>
+        <div class="sol-icon"><svg viewBox="0 0 24 24"><path d="M3 21c4-1 5-4 5-7 4 1 8-1 9-5 1-3 0-6 0-6s-3-1-6 0C7 4 5 8 6 12c-3 0-5 2-3 9z"/></svg></div>
+        <h3>Hard-to-Reach Fruit</h3>
+        <p>Tall canopies, upper branches, and steep terrain that crews skip or can't safely access.</p>
       </div>
       <div class="sol-card tilt reveal d2"><div class="glare"></div>
-        <div class="sol-num">UC—03</div>
-        <div class="sol-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div>
-        <h3>Variable-Rate Prescriptions</h3>
-        <p>Export zone maps straight to your spreader, sprayer, or seeder — treat only where it pays.</p>
+        <div class="sol-num">UC&mdash;03</div>
+        <div class="sol-icon"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="10" r="2.5"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5M15 18c0-2 2-3 4-3s3 1 3 3"/></svg></div>
+        <h3>Crew Augmentation</h3>
+        <p>Work alongside human pickers to scale harvesting capacity on demand, rather than replacing your team.</p>
       </div>
       <div class="sol-card tilt reveal d3"><div class="glare"></div>
-        <div class="sol-num">UC—04</div>
-        <div class="sol-icon"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></div>
-        <h3>Stand Counts &amp; Yield</h3>
-        <p>Early emergence counts and biomass tracking sharpen replant decisions and yield estimates.</p>
+        <div class="sol-num">UC&mdash;04</div>
+        <div class="sol-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></div>
+        <h3>Extended Hours</h3>
+        <p>Autonomous operation keeps harvesting going beyond the limits of available daylight and labor.</p>
       </div>
     </div>
   </div>
 </section>
- 
-<!-- ================= TECHNOLOGY ================= -->
-<section class="tech" id="technology">
+
+<!-- ================= THE DRONE (PAGE 2) ================= -->
+<section id="drone" style="padding-top:0">
   <div class="container">
-    <div class="tech-split">
-      <div class="panel reveal" aria-label="Live NDVI crop health map demonstration">
-        <div class="panel-top"><span class="t">FIELD 12 — NDVI INDEX</span><span class="live">LIVE SCAN</span></div>
-        <div class="ndvi-grid" id="ndviGrid"></div>
-        <div class="ndvi-legend"><span>Stressed</span><div class="legend-bar"></div><span>Healthy</span></div>
-        <div class="panel-readout"><span>SENSOR <b>5-BAND MS</b></span><span>GSD <b>1.2 CM/PX</b></span><span>ANOMALY AI <b>ON</b></span></div>
-        <div class="cross-sweep"></div>
-      </div>
-      <div>
-        <div class="eyebrow reveal"><span class="tick"></span><span class="mono-tag">Technology</span></div>
-        <h2 class="sec-title reveal d1">From flight<br><span class="dim">to field decision.</span></h2>
-        <div class="feature reveal d1">
-          <div class="f-num">/01</div>
-          <div><h3>Autonomous Field Coverage</h3><p>Draw your boundary once — Harvest One plans the survey grid, flies it, and returns home on its own.</p></div>
-        </div>
-        <div class="feature reveal d2">
-          <div class="f-num">/02</div>
-          <div><h3>Multispectral AI Vision</h3><p>Five spectral bands plus thermal, analyzed onboard to flag stress, weeds, and water issues automatically.</p></div>
-        </div>
-        <div class="feature reveal d3">
-          <div class="f-num">/03</div>
-          <div><h3>Farm Management Integration</h3><p>Prescription maps export to John Deere Ops Center, Climate FieldView, and standard shapefiles.</p></div>
-        </div>
-        <div class="feature reveal d4">
-          <div class="f-num">/04</div>
-          <div><h3>Cloud Agronomy Analytics</h3><p>Season-over-season trends, zone comparisons, and scouting reports minutes after landing.</p></div>
-        </div>
-      </div>
+    <div class="soon-banner reveal">
+      <span class="dot"></span>
+      <span class="soon-text">COMING VERY SOON</span>
+      <span class="dot"></span>
     </div>
-  </div>
-</section>
- 
-<!-- ================= PRODUCT ================= -->
-<section id="product">
-  <div class="container">
-    <div class="sec-head center reveal">
-      <div class="eyebrow"><span class="mono-tag">The Aircraft</span></div>
-      <h2 class="sec-title">Meet Harvest One</h2>
-      <p class="sec-sub">One platform, engineered exclusively for agriculture. No compromises borrowed from other industries.</p>
+    <div class="sec-head center reveal d1" style="margin-top:48px">
+      <div class="eyebrow"><span class="mono-tag">The Drone</span></div>
+      <h2 class="sec-title">The full breakdown is<br><span class="dim">almost ready.</span></h2>
+      <p class="sec-sub">We're putting the finishing touches on the full breakdown of how DRONE-ROBOT (DROT) is built and what it can do. Soon you'll find the complete picture here:</p>
     </div>
-    <div class="prod-wrap reveal">
-      <div class="prod-stage">
-        <div class="pad"></div>
+
+    <div class="drone-preview reveal d1">
+      <div class="drone-stage">
         <div class="drone-float" style="animation-duration:8.5s">
-          <svg width="360" height="262" viewBox="0 0 400 290" fill="none" aria-hidden="true">
+          <svg width="320" height="232" viewBox="0 0 400 290" fill="none" aria-hidden="true">
             <use href="#droneCore"/>
           </svg>
         </div>
       </div>
-      <div class="prod-info">
-        <h3 class="prod-name">Harvest One</h3>
-        <div class="prod-sub">Autonomous Agricultural Monitoring UAS</div>
-        <p>Built around a 5-band multispectral + thermal payload and an autonomy core that flies survey grids without a pilot on the sticks. Launch from the truck bed, walk the rows, come back to finished maps.</p>
-        <div class="spec-grid">
-          <div class="spec-cell"><div class="k">Coverage</div><div class="v">400 <small>HA/DAY</small></div></div>
-          <div class="spec-cell"><div class="k">Flight time</div><div class="v">48 <small>MIN</small></div></div>
-          <div class="spec-cell"><div class="k">Resolution</div><div class="v">1.2 <small>CM/PX</small></div></div>
-          <div class="spec-cell"><div class="k">Sensors</div><div class="v">5+1 <small>BANDS</small></div></div>
-          <div class="spec-cell"><div class="k">Wind rating</div><div class="v">12 <small>M/S</small></div></div>
-          <div class="spec-cell"><div class="k">Positioning</div><div class="v">RTK <small>±2 CM</small></div></div>
-        </div>
-        <a href="#contact" class="btn btn-gold magnetic"><span class="shine"></span>Request Demo
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
+    </div>
+
+    <div class="soon-grid">
+      <div class="soon-card reveal"><span class="pill">SOON</span>
+        <div class="soon-icon"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h7l-1 8 11-12h-7z"/></svg></div>
+        <h3>Efficiency &amp; Power</h3>
+        <p>How much it harvests per charge, and how little electricity it takes to do it.</p>
+      </div>
+      <div class="soon-card reveal d1"><span class="pill">SOON</span>
+        <div class="soon-icon"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div>
+        <h3>Specifications</h3>
+        <p>The full technical profile of the aircraft and its harvesting system.</p>
+      </div>
+      <div class="soon-card reveal d2"><span class="pill">SOON</span>
+        <div class="soon-icon"><svg viewBox="0 0 24 24"><path d="M3 12h18M3 12l4-4M3 12l4 4M21 12l-4-4M21 12l-4 4"/></svg></div>
+        <h3>Range</h3>
+        <p>How much ground a single drone can cover.</p>
+      </div>
+      <div class="soon-card reveal"><span class="pill">SOON</span>
+        <div class="soon-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+        <h3>Endurance</h3>
+        <p>How long it stays in the air on one charge.</p>
+      </div>
+      <div class="soon-card reveal d1"><span class="pill">SOON</span>
+        <div class="soon-icon"><svg viewBox="0 0 24 24"><path d="M3 8l9-5 9 5-9 5-9-5z"/><path d="M3 8v8l9 5 9-5V8"/></svg></div>
+        <h3>Payload</h3>
+        <p>How much fruit it can carry per run.</p>
+      </div>
+      <div class="soon-card reveal d2"><span class="pill">SOON</span>
+        <div class="soon-icon"><svg viewBox="0 0 24 24"><path d="M4 20v-6a4 4 0 014-4h6"/><path d="M14 6l4 4-4 4"/><circle cx="4" cy="20" r="1.6"/></svg></div>
+        <h3>Robotic Arm Reach</h3>
+        <p>How far it can extend to pick fruit others leave behind.</p>
       </div>
     </div>
+    <p class="soon-foot reveal">Check back soon for the full specifications.</p>
   </div>
 </section>
- 
+
 <!-- hidden reusable drone symbol -->
 <svg width="0" height="0" style="position:absolute">
   <defs>
@@ -308,9 +326,12 @@
       <rect x="308" y="194" width="32" height="30" rx="9" fill="#1A212D" stroke="#4A5468" stroke-width="1.6"/>
       <path d="M148 122 Q200 96 252 122 L268 142 Q200 178 132 142 Z" fill="#1E2532" stroke="#525E76" stroke-width="1.6"/>
       <path d="M163 126 Q200 111 237 126" stroke="#C9A14A" stroke-width="2.2" fill="none"/>
-      <rect x="178" y="176" width="44" height="30" rx="8" fill="#141A24" stroke="#525E76" stroke-width="1.6"/>
-      <circle cx="191" cy="191" r="8" fill="#11233A" stroke="#46E08B" stroke-width="1.4"/>
-      <circle cx="211" cy="191" r="8" fill="#11233A" stroke="#4D8DFF" stroke-width="1.4"/>
+      <path d="M200 168 L200 196" stroke="#39435A" stroke-width="7" stroke-linecap="round"/>
+      <path d="M200 196 L186 214" stroke="#39435A" stroke-width="6" stroke-linecap="round"/>
+      <circle cx="200" cy="196" r="4" fill="#1A212D" stroke="#C9A14A" stroke-width="1.3"/>
+      <path d="M186 214 l-7 7 M186 214 l7 7" stroke="#46E08B" stroke-width="2.4" stroke-linecap="round"/>
+      <rect x="182" y="170" width="36" height="22" rx="7" fill="#141A24" stroke="#525E76" stroke-width="1.6"/>
+      <circle cx="200" cy="181" r="7" fill="#11233A" stroke="#46E08B" stroke-width="1.4"/>
       <path d="M158 152 L148 228 M242 152 L252 228" stroke="#39435A" stroke-width="6" stroke-linecap="round"/>
       <path d="M134 228 L172 228 M228 228 L266 228" stroke="#39435A" stroke-width="6" stroke-linecap="round"/>
       <circle cx="140" cy="140" r="3.4" fill="#FF5A5A"><animate attributeName="opacity" values="1;.15;1" dur="1.2s" repeatCount="indefinite"/></circle>
@@ -318,151 +339,46 @@
     </g>
   </defs>
 </svg>
- 
-<!-- ================= ARCHITECTURE ================= -->
-<section id="architecture" style="padding-top:0">
+
+<!-- ================= MISSION ================= -->
+<section id="mission" style="padding-top:0">
   <div class="container">
     <div class="sec-head center reveal">
-      <div class="eyebrow"><span class="mono-tag">System Architecture</span></div>
-      <h2 class="sec-title">Rotor to report</h2>
-      <p class="sec-sub">Every Harvest One runs one integrated stack, hardened end to end.</p>
+      <div class="eyebrow"><span class="mono-tag">Mission</span></div>
+      <h2 class="sec-title">Where we are.<br><span class="dim">Where we're going.</span></h2>
     </div>
-    <div class="arch-diagram">
-      <div class="arch-node reveal">
-        <div class="n-icon"><svg viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg></div>
-        <div><h4>Flight Controller</h4><span>Redundant autopilot core</span></div><span class="n-id">M-01</span>
+    <div class="mission-grid">
+      <div class="mission-card reveal">
+        <div class="when">Today</div>
+        <h3>Recover the harvest</h3>
+        <p>Our mission is to give growers a faster, more cost-effective way to harvest — one that reduces waste, recovers the fruit that would otherwise be left on the tree, and turns lost crops back into revenue.</p>
       </div>
-      <div class="arch-link"></div>
-      <div class="arch-node reveal d1">
-        <div class="n-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
-        <div><h4>Navigation System</h4><span>RTK GNSS — ±2 cm over every row</span></div><span class="n-id">M-02</span>
-      </div>
-      <div class="arch-link l2"></div>
-      <div class="arch-node reveal d2">
-        <div class="n-icon"><svg viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></div>
-        <div><h4>Sensors</h4><span>5-band multispectral, RGB, thermal</span></div><span class="n-id">M-03</span>
-      </div>
-      <div class="arch-link l3"></div>
-      <div class="arch-node reveal d3">
-        <div class="n-icon"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 9h6v6H9z"/></svg></div>
-        <div><h4>AI Compute</h4><span>Onboard NDVI + anomaly detection</span></div><span class="n-id">M-04</span>
-      </div>
-      <div class="arch-link l4"></div>
-      <div class="arch-node reveal d4">
-        <div class="n-icon"><svg viewBox="0 0 24 24"><path d="M5 12a7 7 0 0114 0M2 12a10 10 0 0120 0"/><circle cx="12" cy="16" r="2"/><path d="M12 18v3"/></svg></div>
-        <div><h4>Communication System</h4><span>Long-range link + LTE for remote fields</span></div><span class="n-id">M-05</span>
-      </div>
-      <div class="arch-link l5"></div>
-      <div class="arch-node reveal d5">
-        <div class="n-icon"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="12" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-        <div><h4>Ground Station</h4><span>Field maps, prescriptions, season analytics</span></div><span class="n-id">M-06</span>
+      <div class="mission-card reveal d1 future">
+        <div class="when">Tomorrow</div>
+        <h3>A drone-robot hybrid</h3>
+        <p>DRONE-ROBOT (DROT) is only the beginning. Our long-term mission is to create a versatile drone-robot hybrid: a platform that combines flight with the ability to grab, lift, and manipulate objects in places today's robots simply can't reach. Beyond the orchard, that means structural inspections, retrieval from heights, and work in environments that are dangerous or inaccessible for people and ground-based machines alike.</p>
       </div>
     </div>
   </div>
 </section>
- 
-<!-- ================= CROPS ================= -->
-<section id="crops" style="padding-top:0">
-  <div class="container">
-    <div class="sec-head reveal">
-      <div class="eyebrow"><span class="tick"></span><span class="mono-tag">Crops</span></div>
-      <h2 class="sec-title">Tuned to <span class="dim">what you grow.</span></h2>
-      <p class="sec-sub">Analytics models calibrated per crop — not one-size-fits-all vegetation indices.</p>
-    </div>
-    <div class="ind-grid">
-      <div class="ind-card tilt reveal"><div class="glare"></div><h3><svg viewBox="0 0 24 24"><path d="M12 22V8M12 8c-3 0-5-2-5-5 3 0 5 2 5 5zM12 12c3 0 5-2 5-5-3 0-5 2-5 5zM12 17c-3 0-5-2-5-5 3 0 5 2 5 5z"/></svg>Corn &amp; Soybeans</h3><p>Stand counts, nitrogen stress zones, and tassel-stage health tracking at row-crop scale.</p></div>
-      <div class="ind-card tilt reveal d1"><div class="glare"></div><h3><svg viewBox="0 0 24 24"><circle cx="9" cy="14" r="3"/><circle cx="15" cy="14" r="3"/><circle cx="12" cy="9" r="3"/><path d="M12 6V2"/></svg>Vineyards</h3><p>Vigor maps by block and row for canopy management and selective harvest planning.</p></div>
-      <div class="ind-card tilt reveal d2"><div class="glare"></div><h3><svg viewBox="0 0 24 24"><circle cx="12" cy="14" r="6"/><path d="M12 8V4M12 4c2.5 0 4 1.5 4 1.5"/></svg>Orchards</h3><p>Tree-level health scoring, missing-tree detection, and irrigation uniformity checks.</p></div>
-      <div class="ind-card tilt reveal"><div class="glare"></div><h3><svg viewBox="0 0 24 24"><path d="M4 21c2-6 4-9 8-9M12 12c0-4 2-7 8-9-1 6-3 9-8 9z"/><path d="M4 21h16"/></svg>Wheat &amp; Grains</h3><p>Biomass and lodging assessment to time inputs and harvest order across fields.</p></div>
-      <div class="ind-card tilt reveal d1"><div class="glare"></div><h3><svg viewBox="0 0 24 24"><circle cx="8" cy="8" r="2.5"/><circle cx="16" cy="8" r="2.5"/><circle cx="8" cy="16" r="2.5"/><circle cx="16" cy="16" r="2.5"/></svg>Cotton &amp; Specialty</h3><p>Plant population, defoliation timing, and boll-stage monitoring for specialty rotations.</p></div>
-      <div class="ind-card tilt reveal d2"><div class="glare"></div><h3><svg viewBox="0 0 24 24"><path d="M3 18c3-1 5-1 9 0s6 1 9 0"/><path d="M3 14c3-1 5-1 9 0s6 1 9 0"/><path d="M7 10c1-3 3-5 5-6 2 1 4 3 5 6"/></svg>Pasture &amp; Forage</h3><p>Grazing rotation planning and forage availability mapping across large acreage.</p></div>
-    </div>
-  </div>
-</section>
- 
-<!-- ================= METRICS ================= -->
-<div class="metrics">
-  <div class="container">
-    <div class="metric-grid">
-      <div class="metric reveal"><div class="num"><span class="counter" data-target="250">0</span>K+</div><div class="label">Hectares Mapped</div></div>
-      <div class="metric reveal d1"><div class="num"><span class="counter" data-target="12">0</span>K+</div><div class="label">Survey Flights</div></div>
-      <div class="metric reveal d2"><div class="num"><span class="counter" data-target="8">0</span>%</div><div class="label">Avg. Input Savings</div></div>
-      <div class="metric reveal d3"><div class="num"><span class="counter" data-target="98">0</span>%</div><div class="label">Mission Success Rate</div></div>
-    </div>
-  </div>
-</div>
- 
-<!-- ================= WHY ================= -->
-<section id="about">
-  <div class="container">
-    <div class="sec-head center reveal">
-      <div class="eyebrow"><span class="mono-tag">Why Tony Technologies</span></div>
-      <h2 class="sec-title">Built for the farm, by design</h2>
-    </div>
-    <div class="why-grid">
-      <div class="why-card reveal">
-        <div class="why-tag">Foundation</div>
-        <h3>Aerospace Engineering</h3>
-        <p>Built by aerospace engineers to flight-critical standards — a drone that survives dust, heat, and a full season of daily use.</p>
-      </div>
-      <div class="why-card reveal d1">
-        <div class="why-tag">Intelligence</div>
-        <h3>Agronomic Intelligence</h3>
-        <p>AI models trained with crop scientists, so the maps you get answer agronomy questions — not just pretty pictures.</p>
-      </div>
-      <div class="why-card reveal d2">
-        <div class="why-tag">Reliability</div>
-        <h3>Season-Critical Reliability</h3>
-        <p>When a spray window is 48 hours, your data can't wait. Redundant systems and a 98% mission success record.</p>
-      </div>
-    </div>
-  </div>
-</section>
- 
-<!-- ================= TESTIMONIALS ================= -->
-<section id="testimonials" style="padding-top:0">
-  <div class="container">
-    <div class="sec-head reveal">
-      <div class="eyebrow"><span class="tick"></span><span class="mono-tag">Field Reports</span></div>
-      <h2 class="sec-title">Growers <span class="dim">on the record.</span></h2>
-    </div>
-    <div class="testi-grid">
-      <div class="testi-card reveal">
-        <div class="q">"</div>
-        <p>Harvest One flagged a nitrogen deficiency in our north quarter ten days before we'd have caught it scouting. That one catch paid for the season.</p>
-        <div class="testi-who"><div class="avatar">JA</div><div><b>James Alvarez</b><span>Heartland Farms Group</span></div></div>
-      </div>
-      <div class="testi-card reveal d1">
-        <div class="q">"</div>
-        <p>We found three failed drip zones in one thermal flight over the almonds. Used to take a crew two days of walking rows to find one.</p>
-        <div class="testi-who"><div class="avatar">EP</div><div><b>Elena Park</b><span>Vista Verde Almonds</span></div></div>
-      </div>
-      <div class="testi-card reveal d2">
-        <div class="q">"</div>
-        <p>The variable-rate maps go straight into our Deere monitor. We cut fertilizer 12% last year with no yield drag. The math isn't complicated.</p>
-        <div class="testi-who"><div class="avatar">TW</div><div><b>Tom Whitfield</b><span>Whitfield Grain Co.</span></div></div>
-      </div>
-    </div>
-  </div>
-</section>
- 
+
 <!-- ================= CTA ================= -->
 <section class="cta-final" id="contact" style="padding-top:0">
   <div class="container">
     <div class="cta-box reveal">
       <span class="mono-tag">// Get Started</span>
-      <h2>Ready to see your fields differently?</h2>
-      <p>Talk to our team about your crops, acreage, and season — we'll fly a demo over your own fields.</p>
+      <h2>Ready to recover the fruit you're losing?</h2>
+      <p>Talk to our team about your crops, acreage, and harvest window — and be first to see DROT in action.</p>
       <div class="cta-buttons">
         <a href="#" class="btn btn-gold magnetic"><span class="shine"></span>Request Demo
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
-        <a href="#" class="btn btn-ghost magnetic"><span class="shine"></span>Schedule Consultation</a>
+        <a href="#" class="btn btn-ghost magnetic"><span class="shine"></span>Join the Waitlist</a>
       </div>
     </div>
   </div>
 </section>
- 
+
 <!-- ================= FOOTER ================= -->
 <footer>
   <div class="container">
@@ -475,7 +391,7 @@
           </svg>
           <span class="name">TONY<small>Technologies</small></span>
         </a>
-        <p>Autonomous agricultural drones for crop monitoring, irrigation intelligence, and yield forecasting.</p>
+        <p>Autonomous harvesting drones that recover the fruit labor shortages and short harvest windows leave on the tree.</p>
         <div class="socials" aria-label="Social media">
           <a href="#" aria-label="X / Twitter"><svg viewBox="0 0 24 24"><path d="M4 4l16 16M20 4L4 20"/></svg></a>
           <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 11v6M8 8v.01M12 17v-4a2 2 0 014 0v4"/></svg></a>
@@ -485,15 +401,15 @@
       </div>
       <div class="footer-col">
         <h4>Use Cases</h4>
-        <ul><li><a href="#solutions">Crop Health</a></li><li><a href="#solutions">Irrigation</a></li><li><a href="#solutions">Prescriptions</a></li><li><a href="#solutions">Yield Forecasting</a></li></ul>
+        <ul><li><a href="#solutions">Peak-Window Harvesting</a></li><li><a href="#solutions">Hard-to-Reach Fruit</a></li><li><a href="#solutions">Crew Augmentation</a></li><li><a href="#solutions">Extended Hours</a></li></ul>
       </div>
       <div class="footer-col">
         <h4>Product</h4>
-        <ul><li><a href="#product">Harvest One</a></li><li><a href="#technology">Technology</a></li><li><a href="#architecture">Architecture</a></li><li><a href="#crops">Crops</a></li></ul>
+        <ul><li><a href="#drone">The Drone</a></li><li><a href="#problem">The Problem</a></li><li><a href="#mission">Mission</a></li></ul>
       </div>
       <div class="footer-col">
         <h4>Company</h4>
-        <ul><li><a href="#about">About</a></li><li><a href="#">Careers</a></li><li><a href="#contact">Contact</a></li></ul>
+        <ul><li><a href="#mission">About</a></li><li><a href="#">Careers</a></li><li><a href="#contact">Contact</a></li></ul>
         <h4 style="margin-top:30px">Newsletter</h4>
         <div class="newsletter">
           <input type="email" placeholder="WORK EMAIL" aria-label="Email for newsletter">
@@ -507,7 +423,7 @@
     </div>
   </div>
 </footer>
- 
+
 <script src="script.js"></script>
 </body>
 </html>
